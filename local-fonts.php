@@ -23,6 +23,5 @@ add_action('wp_enqueue_scripts','remove_google_fonts',100);
 function remove_google_fonts_connect(){
 	remove_filter('wp_resource_hints', 'twentythirteen_resource_hints');
 }
-
 add_action( 'after_setup_theme', 'remove_google_fonts_connect' );
 ?>
