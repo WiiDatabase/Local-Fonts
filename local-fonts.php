@@ -11,12 +11,12 @@ License URI:  https://opensource.org/licenses/MIT
 */
 
 function local_fonts_styles() {
-        wp_enqueue_style( 'local-fonts', plugin_dir_url( __FILE__ ) . 'assets/css/local-fonts.min.css' );
+	wp_enqueue_style( 'local-fonts', plugin_dir_url( __FILE__ ) . 'assets/css/local-fonts.min.css' );
 }
 add_action( 'wp_enqueue_scripts', 'local_fonts_styles' );
 
 function remove_google_fonts() {
-    wp_deregister_style('twentythirteen-fonts');
+	wp_deregister_style('twentythirteen-fonts');
 }
 add_action('wp_enqueue_scripts','remove_google_fonts',100);
 
